@@ -1,0 +1,296 @@
+/* Ensure the HTML and Body take up the full viewport height */
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+body footer.text-center {
+    background-color: #fff !important;
+    color: #000 !important;
+    font-size: 0.7em;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+header {
+    color: #000;           /* Set the text color to black */
+    padding: 0.5rem 1rem;  /* Match the default padding of the .navbar-brand */
+    text-align: left;      /* Align the text to the left */
+    background-color: #fff;/* Set the background color to white */
+    font-family: inherit;  /* Inherit the font from the body or parent element */
+}
+
+header h2 {
+    margin: 0;
+    font-size: 1.25rem;    /* This is the default size of .navbar-brand in Bootstrap 4 */
+}
+
+header p {
+    margin: 10px 0 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:active i {
+    transform: scale(0.95);
+}
+
+.fa {
+    color: black;
+    font-size: 1rem;  /* Adjust this value to your desired size */
+}
+
+.fas:hover {
+    color: #555;  /* Slightly lighter shade of black for hover */
+}
+
+.years {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 40px 0;
+}
+
+.year-link {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.year-link:hover {
+    background-color: #45a049;
+}
+
+footer {
+    flex-shrink: 0;
+    text-align: center;
+    padding: 5px 0;
+    background-color: white;
+    color: #000;
+    font-size: 0.7em; /* Adjust this to make the font size smaller. 0.7em is just an example, you can use px or any other unit as well. */
+}
+
+#imageGallery img {
+    width: 150px; /* or whatever fixed width you desire */
+    height: 150px;
+    object-fit: cover; /* this ensures the image is scaled correctly */
+    margin: 5px; /* add some spacing between thumbnails */
+    cursor: pointer; /* indicates clickable */
+}
+
+.thumbnail-container {
+    display: inline-block;
+    text-align: center;
+    margin: 10px;
+}
+
+.thumbnail-date {
+    margin-top: 5px;
+    font-size: 0.9em;
+    color: #555;
+}
+
+/* Add to style.css */
+
+.navigation {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.navigation button {
+    margin: 0 10px;
+    padding: 8px 15px;
+    cursor: pointer;
+    background-color: #f7f7f7;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+}
+
+.navigation button:hover {
+    background-color: #e7e7e7;
+}
+
+.thumbnail-date {
+    display: block;
+    text-align: center;
+    padding: 5px 10px;
+    background-color: rgba(0, 0, 0, 0.7);  /* Semi-transparent black */
+    color: #FFF;  /* White text color */
+    border-radius: 5px;  /* Rounded corners */
+    font-size: 0.9em;  /* Adjust if needed */
+    margin-top: 5px;   /* Space between the image and the date label */
+}
+
+.thumbnail-container {
+    display: inline-block;  /* Allow for positioning */
+    margin: 5px;  /* Space around each image */
+    vertical-align: top;   /* This aligns the images at the top, so if their heights vary slightly due to the label, it doesn't misalign the rows. */
+}
+
+.thumbnail-container img {
+    border: 1px solid black;
+    display: block; /* This will remove any bottom spacing caused by the inline nature of images */
+}
+
+/* Space between month names */
+#months a {
+    margin-right: 10px; /* Adjust this value if you want more or less space */
+    text-decoration: none; /* Removes the default underline */
+}
+
+/* Hover effect for month names */
+#months a:hover {
+    color: blue; /* Or any other color of your choice */
+    cursor: pointer;
+}
+
+#largeImageContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255,0,0,0.8);
+    display: flex; /* Enable flex layout */
+    align-items: center; /* Center child items vertically */
+    justify-content: center; /* Center child items horizontally */
+}
+
+#largeImage {
+    width: auto;
+    max-width: 98vw;  /* Fixed from 98w to 98vw */
+    height: auto;
+    max-height: 98vh; 
+    box-sizing: border-box;
+}
+
+#closeButton {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    padding: 5px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.btn-icon i {
+    font-size: 1rem; /* adjust size as desired */
+    color: black; /* adjust color as desired */
+}
+
+
+/* For the dateGallery thumbnails */
+.date-thumbnail-container {
+    display: inline-block;
+    text-align: center;
+    margin: 5px;
+}
+
+
+.date-thumbnail-container img {
+    border: 1px solid black;
+    display: block;
+}
+
+.date-thumbnail-container > a > img {
+    max-width: 200px; /* or whatever width you find suitable */
+    height: auto;
+    display: block;
+    margin: 0 auto; /* for centering in their parent container */
+}
+
+.date-thumbnail-year {
+    display: block;
+    text-align: center;
+    padding: 5px 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #FFF;
+    border-radius: 5px;
+    font-size: 0.9em;
+    margin-top: 5px;
+    width: 200px;  /* Set fixed width to match the thumbnail width */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.landing-page-label {
+    position: absolute;
+    bottom: 10px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+}
+
+.thumbnail-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.thumbnail-date {
+    margin-top: 5px;
+    text-align: center;
+}
+
+.img-fluid {
+    max-width: 90%;
+    height: auto;
+}
+
+#closeIcon {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5rem; /* adjust size as desired */
+    color: white; /* adjust color as desired */
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.5); /* semi-transparent background for better visibility */
+    padding: 5px;
+    border-radius: 50%;  /* makes it circular */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* slight shadow */
+}
+
+/* Adjust style for Bootstrap cards */
+
+.card {
+    border: 1px solid #000;  /* Sets the border to 1 pixel thick and black color */
+}
+
+.card-img-top {
+    width: 200px;  /* or whatever width you find suitable */
+    height: 250px;
+    object-fit: cover;
+    margin: 0 auto;  /* center the thumbnail in the card */
+}
+
+/* Custom card margin for consistent spacing */
+.card-margin {
+    margin: 10px 0; /* 10px top and bottom, 0 left and right */
+}

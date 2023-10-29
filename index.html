@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>365.hbvu</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Your custom CSS/JS (if any) -->
+    <link rel="stylesheet" href="static/style.css">
+    <script src="static/script.js" defer></script>
+
+    <!-- Optional: jQuery library and Bootstrap JS for certain Bootstrap components -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Project 365</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <!-- Add more links as needed -->
+            </ul>
+            <!-- Year Search Form -->
+            <form id="yearForm" class="form-inline mr-2">
+                <input type="number" id="yearInput" placeholder="E.g. 2020" required class="form-control mr-2">
+                <button type="submit" class="btn btn-secondary">Go</button>
+            </form>
+            <!-- Date Search Form -->
+            <form id="dateForm" class="form-inline">
+                <input type="text" id="dateInput" placeholder="DD/MM" required class="form-control mr-2">
+                <button type="submit" class="btn btn-secondary">See Photos Over The Years</button>
+            </form>
+        </div>
+    </nav>
+
+    <main class="container mt-5 text-center">
+        <div class="project-explanation mb-5">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum.<br/> Donec in
+                efficitur leo. In hac habitasse platea dictumst. Duis interdum vestibulum nunc a ultrices.</p>
+        </div>
+
+        <div class="row" id="randomImagesContainer">
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 blind_swan_cage. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>
