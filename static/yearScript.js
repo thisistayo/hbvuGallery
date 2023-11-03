@@ -70,3 +70,14 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+function updateURLAndReload(year, month) {
+    // Construct the new URL based on the year and optionally the month
+    let newURL = `/gallery/year.html?year=${year}`;
+    if (month) {
+        newURL += `&month=${month}`;
+    }
+    
+    // Redirect to the new URL
+    window.location.href = newURL;
+}
