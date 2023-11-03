@@ -38,9 +38,29 @@
 
         </div>
     </nav>
-    <header class="py-1">
-        <h2 id="headerTitle">Photos from [Year]</h2>
-    </header>
+
+    <main class="container mt-5">
+        <div class="d-flex justify-content-center align-items-center mb-5">
+            <!-- Previous Month -->
+            <a href="#" id="prevYear">
+                <i class="fas fa-chevron-left fa-xs"></i>
+            </a>
+            <!-- Spacing between icons -->
+            <span class="mx-3"></span>
+            <header class="py-1">
+                <h2 id="headerTitle">Photos from [Year]</h2>
+            </header>
+            <!-- Spacing between icons -->
+            <span class="mx-3"></span>
+            <!-- Next Month -->
+            <a href="#" id="nextYear">
+                <i class="fas fa-chevron-right fa-xs"></i>
+            </a>
+        </div>
+        <div id="imageGallery" class="row">
+            <!-- Images will be dynamically loaded here -->
+        </div>
+    </main>
 
     <main class="container mt-5">
         <div class="row" id="months">

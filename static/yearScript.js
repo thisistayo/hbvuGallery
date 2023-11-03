@@ -1,10 +1,33 @@
 document.addEventListener("DOMContentLoaded", function () {
     const params = new URLSearchParams(window.location.search);
-    const year = params.get('year');
+    let year = parseInt(params.get('year')); // Parse year as an integer
+    const month = params.get('month'); // Retrieve the month if needed
+
     document.getElementById("headerTitle").innerText = `Photos from ${year}`;
 
-    const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    const monthNames = [
+        "January", "February", "March", "April", "May", "June",
+        "July", "August", "September", "October", "November", "December"
+    ];
+
     const monthsContainer = document.getElementById("months");
+
+    // Navigation arrows
+    document.getElementById("prevYear").addEventListener("click", function (e) {
+        e.preventDefault();
+        if (year > 2010) {
+            year -= 1;
+            updateURLAndReload(year, month);
+        }
+    });
+
+    document.getElementById("nextYear").addEventListener("click", function (e) {
+        e.preventDefault();
+        if (year < 2023) {
+            year += 1;
+            updateURLAndReload(year, month);
+        }
+    });
 
     monthNames.forEach((month, index) => {
         const startDate = new Date(2010, 2, 11); // March 10th, 2010
