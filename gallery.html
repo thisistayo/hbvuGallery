@@ -4,8 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery</title>
-
+    <title>hbvu.365</title>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -23,7 +22,6 @@
 </head>
 
 <body>
-
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="index.html">Project 365</a>
@@ -38,23 +36,22 @@
                 </li>
                 <!-- Add more links as needed -->
             </ul>
-
         </div>
     </nav>
 
-    <header class="py-1">
-        <h2 id="currentMonthYear">[Month Year]</h2>
-    </header>
     <main class="container mt-5">
         <div class="d-flex justify-content-center align-items-center mb-5">
             <!-- Previous Month -->
             <a href="#" id="prevMonth">
                 <i class="fas fa-chevron-left fa-xs"></i>
             </a>
-
             <!-- Spacing between icons -->
             <span class="mx-3"></span>
-
+            <header class="py-1">
+                <h2 id="currentMonthYear">[Month Year]</h2>
+            </header>
+            <!-- Spacing between icons -->
+            <span class="mx-3"></span>
             <!-- Next Month -->
             <a href="#" id="nextMonth">
                 <i class="fas fa-chevron-right fa-xs"></i>
@@ -63,16 +60,23 @@
         <div id="imageGallery" class="row">
             <!-- Images will be dynamically loaded here -->
         </div>
+
     </main>
     <!-- Large image display (initially hidden) -->
     <div id="largeImageContainer" class="position-fixed w-100 h-100"
         style="top: 0; left: 0; background-color: rgba(0,0,0,0.8); display: none;">
         <img id="largeImage" src="" alt="Large Image" class="img-fluid m-auto d-block">
-        <i id="closeIcon" class="fas fa-times fa-xs" style="position: absolute; top: 20px; right: 20px; cursor: pointer;"></i>
+        <i id="closeIcon" class="fas fa-times fa-xs"
+            style="position: absolute; top: 20px; right: 20px; cursor: pointer;"></i>
     </div>
 
     <footer class="text-center py-4 mt-5">
-        <p>&copy; 2023 blind_swan_cage. All rights reserved.</p>
+        ©
+        2010 - 2023
+        ·
+        caecus | olor | decipula
+        ·
+        exhalant et inhalantes, non conflare
     </footer>
 </body>
 
